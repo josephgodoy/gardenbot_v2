@@ -1,5 +1,11 @@
+## gardenbot_v2 ##
+## Joseph Godoy ##
+
+import numpy
+import scipy
 import tweepy
 import time
+import pyserial
 from datetime import datetime
 
 ## Authorization tokens: ##
@@ -17,14 +23,8 @@ api = tweepy.API(auth)
 
 ## Plant-watering function for PySerial. ##
 
-## In short: here's what's going on in the block of code below:
-## With each pass of the while-loop, the API grabs the tweets in the bot's
-## entire tweet timeline in JSON form. A for-loop checks each string in the
-## list using the .text attribute, and checks it for 'Water my plant!'.
-
 ## To do: create list of tweet.id_str that have already been used, don't use any
 ## ID over again.
-
 
 while True:
    public_tweets = api.home_timeline()
