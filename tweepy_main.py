@@ -2,7 +2,6 @@
 ## Joseph Godoy ##
 
 import numpy as np
-import scipy
 import serial
 import tweepy
 import time
@@ -14,10 +13,10 @@ port1 = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
 
 ## Authorization tokens: ##
 
-access_token = # A string containing you access tokens here.
-access_token_secret = #A string containing your access tokens here.
-consumer_key = # A string containing your consumer key here.
-consumer_secret = # A string containing your secret consumer key here.
+access_token = '852607359436423168-V66VdNGwnrxl1E1anW57CgsbSqXpDNi'
+access_token_secret = 'kQRvgeIzf93GbMvFL9Ne4u90SfYGqBSh5mf7Jv1lifQqs'
+consumer_key = 'Cb9Yph1IImtCr2RhHpQS40XFw'
+consumer_secret = 'VSMoOZbJNncrplY9m2IEprDqnGarPuTemPzVXx0KeT7p2kK2Fu'
 
 ## More Twitter API authorization stuff. ##
 
@@ -31,7 +30,11 @@ api = tweepy.API(auth)
 ## ID over again.
 
 while True:
+
+   # API call: grabs timeline as string. Call sparingly to avoid ratelimiting.
+
    public_tweets = api.home_timeline()
+
    for tweet in public_tweets:
       if tweet.text == 'Water my plant!':
          print('Water request received.\n')

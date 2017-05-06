@@ -5,7 +5,7 @@ int blinkPin = 13;
 
 // Retrieve value from Python script.
 
-int retrieveCoord()
+int fetchData()
 {
    while(!Serial.available())
    {
@@ -45,7 +45,7 @@ void loop()
 
   char new_line_catch[1]  = {0};
 
-  int value = retrieveCoord();
+  int value = fetchData();
 
   Serial.readBytes(new_line_catch, 1);
 
@@ -53,15 +53,15 @@ void loop()
 
   if (value == 1)
   {
-    
+
      digitalWrite(transistorPin, HIGH); // turn on the motor
      digitalWrite(blinkPin, HIGH); // turn on the LED
-     delay(1000);
+     delay(2000);
      digitalWrite(transistorPin, LOW);  // turn off the motor
      digitalWrite(blinkPin, LOW);  // turn off the LED
 
   }
 
-  delay(1000);
+  delay(2000);
 
 }

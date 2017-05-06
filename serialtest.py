@@ -20,7 +20,8 @@ time.sleep(2)
 
 while True:
 
-    data = np.random.randint(0, 2)
+    #data = np.random.randint(0, 2)
+    data = 1
     print(data)
     port1.write(bytes(data))
     time.sleep(10)
