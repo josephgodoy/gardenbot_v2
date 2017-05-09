@@ -1,6 +1,11 @@
 ## gardenbot_v2 ##
 ## Joseph Godoy ##
 
+## Usage: this is the Python component of the Gardenbot scripts.
+## This script runs continually in the background.
+
+## Functionality: This script accesses the Twitter API.
+
 import numpy as np
 import serial
 import tweepy
