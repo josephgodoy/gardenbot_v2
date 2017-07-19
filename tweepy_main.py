@@ -13,15 +13,17 @@ import time
 from datetime import datetime
 
 ## Initializing the serial port: ##
+## Note: '/dev/ttyUSB0' is specific to my machine. You may have to modify 
+## the string to get it to work with your serial ports. ##
 
-port1 = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
+port1 = serial.Serial('/dev/ttyUSB0', 9600, timeout=1) 
 
 ## Authorization tokens: ##
 
-access_token = '852607359436423168-V66VdNGwnrxl1E1anW57CgsbSqXpDNi'
-access_token_secret = 'kQRvgeIzf93GbMvFL9Ne4u90SfYGqBSh5mf7Jv1lifQqs'
-consumer_key = 'Cb9Yph1IImtCr2RhHpQS40XFw'
-consumer_secret = 'VSMoOZbJNncrplY9m2IEprDqnGarPuTemPzVXx0KeT7p2kK2Fu'
+access_token = #Your API tokens here
+access_token_secret = #Your API tokens here
+consumer_key = #Your API tokens here
+consumer_secret = #Your API tokens here
 
 ## More Twitter API authorization stuff. ##
 
